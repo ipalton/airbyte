@@ -1,4 +1,4 @@
-# Stream SurveyMonkey data
+# SurveyMonkey
 
 Set up a SurveyMonkey source connector to extract survey, question, response, and collector data from your SurveyMonkey account.
 
@@ -10,7 +10,7 @@ Airbyte officially supports OAuth for SurveyMonkey only for the US. If you have 
 
 ## Supported streams and sync modes
 
-You can stream the following data from SurveyMonkey using various [sync modes](/docs/using-airbyte/core-concepts/sync-modes/README).
+You can stream the following data from SurveyMonkey using various [sync modes](/using-airbyte/core-concepts/sync-modes/).
 
 | Stream | Sync mode |
 | :------ | :--------- |
@@ -48,13 +48,13 @@ You may want to review SurveyMonkey's [API](https://developer.surveymonkey.com/a
 
 1. In the left navigation bar, click **Sources**. 
 2. Click **New source**.
-3. Find and select **SurveyMonkey**.
+3. Find and click **SurveyMonkey**.
 4. Click **Authenticate your SurveyMonkey account**. Log in and authorize Airbyte to access your SurveyMonkey account.
 5. Fill out the form.
     - **Source name**: A short, descriptive name to help you identify this source in Airbyte.
-    - **Start Date**: Any data before this date will not be replicated.
-    - **Origin datacenter of the SurveyMonkey account**: API access URLs may depend on the origin datacenter's location.
-    - **Survey Monkey survey IDs**: If you want to replicate specific surveys, enter the IDs of those surveys. If you want to replicate all survey data, leave this blank.
+    - **Start Date**: Any data before this date will not be extracted.
+    - **Origin datacenter of the SurveyMonkey account**: Airbyte needs to know this because API access URLs may depend on the origin datacenter's location.
+    - **Survey Monkey survey IDs**: If you want to extract specific surveys, enter the IDs of those surveys. If you want to extract all survey data, leave this blank.
 6. Click **Set up source**. Wait a moment while Airbyte tests the connection.
 <!-- /env:cloud -->
 
@@ -63,17 +63,17 @@ You may want to review SurveyMonkey's [API](https://developer.surveymonkey.com/a
 
 1. In the left navigation bar, click **Sources**. 
 2. Click **New source**.
-3. Find and select **SurveyMonkey**.
+3. Find and click **SurveyMonkey**.
 4. Fill out the form.
     - **Source name**: A short, descriptive name to help you identify this source in Airbyte.
     - **Access Token**: Your SurveyMonkey access token.
-    - **Start Date**: Any data before this date will not be replicated.
-    - **Origin datacenter of the SurveyMonkey account**: API access URLs may depend on the origin datacenter's location.
-    - **Survey Monkey survey IDs**: If you want to replicate specific surveys, enter the IDs of those surveys. If you want to replicate all survey data, leave this blank.
+    - **Start Date**: Any data before this date will not be extracted.
+    - **Origin datacenter of the SurveyMonkey account**: Airbyte needs to know this because API access URLs may depend on the origin datacenter's location.
+    - **Survey Monkey survey IDs**: If you want to extract specific surveys, enter the IDs of those surveys. If you want to extract all survey data, leave this blank.
 6. Click **Set up source**. Wait a moment while Airbyte tests the connection.
 <!-- /env:oss -->
 
-Once Airbyte confirms your source works, define a [destination](../destinations/README) for your data.
+Once Airbyte confirms your connection works, define a [destination](../destinations) for your data.
 
 ## Rate limits
 
