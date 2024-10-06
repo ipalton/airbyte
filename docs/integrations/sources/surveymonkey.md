@@ -4,7 +4,7 @@ Set up a SurveyMonkey source connector to extract survey, question, response, an
 
 :::note
 
-Airbyte officially supports OAuth for SurveyMonkey only for the US. If you have issues, [contact us](mailto:product@airbyte.io).
+Airbyte officially supports OAuth for SurveyMonkey only for the US. If you have any issues, [contact us](https://support.airbyte.com/hc/en-us).
 
 :::
 
